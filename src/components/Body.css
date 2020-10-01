@@ -1,6 +1,6 @@
 .body {
     height: 100vh;
-    flex: 0.8;
+    flex: 0.9;
     background: linear-gradient(rgb(91, 87, 115), rgba(0, 0, 0, 1));
     color: white;
     padding: 30px;
@@ -19,7 +19,7 @@
 
 .body__info > img {
     margin-right: 20px;
-    height: clamp(50px, 20vw, 180px);
+    height: clamp(50px, 20vw, 230px);
 }
 
 .body__infoText {
@@ -27,7 +27,7 @@
 }
 
 .body__infoText > h2 {
-    font-size: 48px;
+    font-size: 96px;
     margin-bottom: 10px;
 }
 
@@ -59,10 +59,29 @@
 .body__songs {
     margin: 20px -30px;
     background: linear-gradient(rgba(0,0,0,.4),#121212);
+    /* height: 100%; */
 }
 
 hr {
     border: 1px solid #282828;
     width: 95%;
     margin: 10px auto;
+}
+
+.body__emptySong {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    margin: 0 auto;
+}
+
+.body__emptySong > h1 {
+    font-size: 44px;
+    margin-bottom: 10px;
+}
+
+.body__emptySong > p {
+    font-size: 20px;
 }

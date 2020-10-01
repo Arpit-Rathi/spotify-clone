@@ -10,7 +10,7 @@ const spotify = new SpotifyWebApi();
 
 const App = () => {
 
-  const [{ user, token}, dispatch] = useDataLayerValue()
+  const [{ token, currentPlaylist }, dispatch] = useDataLayerValue()
 
   useEffect(() => {
     const hash = getTokenfromResponse();
@@ -42,7 +42,7 @@ const App = () => {
         });
       });
 
-      spotify.getPlaylist('37i9dQZEVXcUj2zk0KSsja').
+      spotify.getPlaylist(currentPlaylist).
       then(playlistsInfo => {
         dispatch({
           type: 'SET_PLAYLISTINFO',
