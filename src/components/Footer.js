@@ -2,15 +2,19 @@ import { Grid, Slider } from '@material-ui/core';
 import { PlayCircleOutline, PlaylistPlay, Repeat, Shuffle, SkipNext, SkipPrevious, VolumeDown } from '@material-ui/icons';
 import React from 'react';
 import './Footer.css';
+import { useDataLayerValue } from '../data/DataLayer';
 
 const Footer = () => {
+
+    const [{ currentSong }, dispatch] = useDataLayerValue()
+
     return (
         <div className="footer">
             <div className="footer__left">
-                <img className="footer__albumLogo" src="https://upload.wikimedia.org/wikipedia/en/thumb/9/95/Origins_cover.png/220px-Origins_cover.png"></img>
+                <img className="footer__albumLogo" src={currentSong.imageUrl}></img>
                 <div className="footer__songInfo">
-                    <h4>No song is playing</h4>
-                    <p>Usher</p>
+                    <h4>{currentSong.name}</h4>
+                    <p>{currentSong.artist}</p>
                 </div>
             </div>
             <div className="footer__center">
