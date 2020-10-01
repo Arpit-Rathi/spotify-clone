@@ -29,3 +29,28 @@
 .header__right > h4 {
     margin-left: 10px;
 }
+
+.header__search {
+    background: linear-gradient(rgba(0,0,0,.4),#121212);;
+    margin: 20px -30px;
+    padding: 20px;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header__search > .searchHeader {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__search > .searchHeader > .MuiSvgIcon-root {
+    font-size: 60px !important;
+    cursor: pointer;
+}
+
+.header__search > h1 {
+    margin: auto auto;
+}
